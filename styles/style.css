@@ -126,3 +126,12 @@ button {
   max-inline-size: 900px;
   margin-inline: auto;
 }
+
+.three-columns {
+  display: grid;
+  gap: 21px;
+
+  @media (width > 720px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
