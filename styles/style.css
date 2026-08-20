@@ -10,7 +10,8 @@
 }
 
 :root {
-  --clr-accent: hsl(39, 100%, 41%);
+  --clr-accent-400: hsl(39, 100%, 41%);
+  --clr-accent-300: hsl(39, 94%, 57%);
   --clr-neutral-100: hsl(0 0% 100%);
   --clr-neutral-800: hsl(0 0% 20%);
   --fs-400: 1.125rem;
@@ -22,17 +23,22 @@
   --ff-accent: Overlock, serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: var(--clr-neutral-800);
   font-size: var(--fs-400);
   line-height: 1.5;
   font-family: var(--ff-base);
   font-weight: 700;
+  margin: 0;
 }
 
 h1,
 h2 {
-  color: var(--clr-accent);
+  color: var(--clr-accent-400);
   line-height: 1.1;
   font-family: var(--ff-accent);
 }
@@ -50,13 +56,14 @@ h3 {
 }
 
 h1 span {
+  display: block;
   color: var(--clr-neutral-800);
   font-size: 0.75em;
   font-weight: 400;
 }
 
 a {
-  color: var(--clr-accent);
+  color: var(--clr-accent-400);
 }
 
 a:hover,
@@ -64,6 +71,53 @@ a:focus-visible {
   color: inherit;
 }
 
+button {
+  font: inherit;
+}
+
+.button {
+  background-color: var(--clr-accent-300);
+  border: 0;
+  padding: 0.5em 1.5em;
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: var(--clr-neutral-800);
+  color: var(--clr-neutral-100);
+}
+
 .lede {
   font-size: var(--fs-500);
+}
+
+.hero {
+  background-color: var(--clr-accent-400);
+  background-image: url(../assets/images/chess-bg.jpg);
+  background-size: cover;
+  padding-block: 100px;
+  padding-inline: 1rem;
+  text-align: center;
+}
+
+.hero-content {
+  background-color: hsl(0 0% 100% / 0.7);
+  max-inline-size: 900px;
+  padding: 50px;
+  margin-inline: auto;
+}
+
+.page-footer {
+  background-color: var(--clr-neutral-800);
+  background-image: linear-gradient(var(--clr-neutral-800), black);
+  padding: 100px;
+  color: var(--clr-neutral-100);
+  text-align: center;
+}
+
+.middle,
+.footer-content {
+  padding-inline: 1rem;
+  max-inline-size: 900px;
+  margin-inline: auto;
 }
