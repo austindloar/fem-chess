@@ -102,9 +102,15 @@ button {
 
 .hero-content {
   background-color: hsl(0 0% 100% / 0.7);
-  max-inline-size: 900px;
   padding: 50px;
-  margin-inline: auto;
+}
+
+.hero-content > :first-child {
+  margin-block-start: 0;
+}
+
+.hero-content > :last-child {
+  margin-block-end: 0;
 }
 
 .page-footer {
@@ -115,8 +121,7 @@ button {
   text-align: center;
 }
 
-.middle,
-.footer-content {
+.wrapper {
   padding-inline: 1rem;
   max-inline-size: 900px;
   margin-inline: auto;
