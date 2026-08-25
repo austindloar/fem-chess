@@ -14,6 +14,7 @@
   --clr-accent-300: hsl(39, 94%, 57%);
   --clr-neutral-100: hsl(0 0% 100%);
   --clr-neutral-800: hsl(0 0% 20%);
+  --clr-neutral-900: hsl(0 0% 10%);
   --fs-400: 1.125rem;
   --fs-500: 1.3125rem;
   --fs-600: 1.5rem;
@@ -89,6 +90,38 @@ button {
 
 .lede {
   font-size: var(--fs-500);
+}
+
+.page-header {
+  background: var(--clr-neutral-900);
+  padding-block: 21px;
+}
+
+.page-header-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 21px;
+}
+
+.primary-nav ul {
+  display: flex;
+  gap: 21px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.primary-nav a {
+  font-weight: 700;
+  color: var(--clr-neutral-100);
+  text-decoration: none;
+}
+
+.primary-nav a:hover,
+.primary-nav a:focus-visible {
+  color: var(--clr-accent-300);
 }
 
 .hero {
