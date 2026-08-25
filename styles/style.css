@@ -22,6 +22,12 @@
   --fs-800: 3rem;
   --ff-base: system-ui, sans-serif;
   --ff-accent: Overlock, serif;
+
+  @media (width > 960px) {
+    --fs-600: 2rem;
+    --fs-700: 3rem;
+    --fs-800: 4rem;
+  }
 }
 
 * {
